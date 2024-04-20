@@ -10,11 +10,11 @@ services:
       - NET_ADMIN
       - NET_RAW
     environment:
-      - TS_AUTHKEY= #type your authentication key here.
+      - TS_AUTHKEY= #copy and paste your authentication key here.
       - TS_ROUTES=192.168.5.0/24 #change it to your local network like 192.168.1.0/24 or 192.168.2.0/24, etc....
       - TS_STATE_DIR=/var/lib
       - TS_EXTRA_ARGS=--advertise-exit-node #if you want to enable this setting, remember to enable exit node in the tailscale login website also.
-      - TS_HOSTNAME=Cute_cat #change it to any name that you want to show on the tailscale website machine tab.
+      - TS_HOSTNAME=Jellyfin #change it to any name/serice that you want to show on the tailscale website machine tab.
       - TS_NO_LOGS_NO_SUPPORT=true
     volumes:
       - ./tailscale:/var/lib
@@ -27,4 +27,4 @@ networks:
     driver: bridge
     ipam:
      config:
-       - subnet: 172.31.0.0/24
+       - subnet: 172.31.0.0/24 #change it to your desire subnet or keep it as original
