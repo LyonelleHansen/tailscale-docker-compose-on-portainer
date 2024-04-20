@@ -2,7 +2,7 @@ version: '3.5'
 services:
   tailscale:
     container_name: tailscale
-    image: tailscale/tailscale
+    image: tailscale/tailscale:latest
     restart: always
     networks:
       - tailscale-net
